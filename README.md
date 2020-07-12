@@ -1,7 +1,9 @@
 # AVE-Flask-Docker
 A repo for docker builds of AVE-Flask
 
-## Docker compose
+## Configuration
+
+### Docker compose
 
 Example docker-compose.yml
 
@@ -23,4 +25,18 @@ services:
       - <path/to/AVE-usergames/dir>:/home/ubuntu/AVE-usergames
       - <path/to/config.json>:/home/ubuntu/app/config.json
     restart: always
+```
+
+### Caddy
+
+Example Caddyfile
+
+```
+avegame.co.uk {
+    reverse_proxy aveflask_aveflask_1:8000
+}
+
+www.avegame.co.uk {
+    reverse_proxy aveflask_aveflask_1:8000
+}
 ```
