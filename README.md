@@ -18,7 +18,7 @@ services:
       - <path/to/caddy/data/dir>:/data
     restart: always
   aveflask:
-    image: local/aveflask
+    image: avegame/aveflask:0.1.3-ave-1.9.7
     volumes:
       - <path/to/AVE-usergames/dir>:/home/ubuntu/AVE-usergames
       - <path/to/config.json>:/home/ubuntu/app/config.json
