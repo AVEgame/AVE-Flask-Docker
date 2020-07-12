@@ -3,7 +3,7 @@ FROM python:3.8.3-alpine
 RUN apk add libmagic
 
 RUN pip install gunicorn
-COPY ./requirements.txt /
+COPY ./AVE-Flask/requirements.txt /
 RUN pip install -r requirements.txt
 
 RUN adduser --uid 1000 --home /home/ubuntu --disabled-password ubuntu
