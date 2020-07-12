@@ -1,0 +1,3 @@
+[submodule "AVE-Flask"]
+	path = AVE-Flask
+	url = https://github.com/AVEgame/AVE-Flask
